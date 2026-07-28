@@ -1,5 +1,5 @@
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
-import HyperFrame from "@/components/ui/HyperFrame";
+import Reveal from "@/components/ui/Reveal";
 
 const items = [
   { src: "/images/1.jpg", span: "md:row-span-2", tag: "Website", title: "Clinic Booking Site", desc: "Design + build, 3 weeks." },
@@ -17,8 +17,8 @@ export default function Gallery() {
 
       <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-3">
         {items.map((it, i) => (
-          <HyperFrame key={i} delay={(i % 3) * 0.08} dir={i % 2 === 0 ? "left" : "right"} className={`group relative overflow-hidden rounded-2xl bg-white/5 ${it.span}`}>
-            <img src={it.src} alt={it.title} className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:blur-[4px] group-hover:brightness-[0.5]" />
+          <Reveal key={i} delay={(i % 3) * 0.08} className={`group relative overflow-hidden rounded-2xl bg-white/5 ${it.span}`}>
+            <img src={it.src} alt={it.title} className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[3px] group-hover:brightness-[0.5]" />
 
             <div className="absolute inset-0 flex flex-col justify-end p-5 opacity-0 transition-all duration-500 group-hover:opacity-100">
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -28,7 +28,7 @@ export default function Gallery() {
                 <p className="translate-y-3 text-sm text-white/70 transition-transform delay-150 duration-500 group-hover:translate-y-0">{it.desc}</p>
               </div>
             </div>
-          </HyperFrame>
+          </Reveal>
         ))}
       </div>
     </section>
