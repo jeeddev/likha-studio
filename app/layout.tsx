@@ -4,9 +4,8 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
-import MenuOverlay from "@/components/MenuOverlay";
 import Loader from "@/components/Loader";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -36,7 +35,6 @@ export default function RootLayout({
         <Loader />
         <Cursor />
         <Navbar />
-        <MenuOverlay />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
