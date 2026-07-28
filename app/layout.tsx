@@ -37,7 +37,6 @@ export default function RootLayout({
         <Cursor />
         <Navbar />
         <MenuOverlay />
-        <ThemeSwitcher />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
